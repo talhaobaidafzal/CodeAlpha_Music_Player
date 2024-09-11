@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Music Player</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="music_player.css">
+</head>
+<body>
+
+  <div class="sidebar">
+    <div class="logo">🎵</div>
+    <div class="playlist">
+      <h3>Playlist</h3>
+      <ul class="playlistlist">
+        <li>My Playlist</li>
+        <li>Last Listening</li>
+        <li>Recommended</li>
+      </ul>
+    </div>
+    <div class="song-list">
+      <ul>
+        <li data-src="Songs/Bad Habits.mp3" >🎵 Bad Habits</li>
+        <li data-src="Songs/LIFETIMES.mp3" >🎵 LIFETIMES</li>
+        <li data-src="Songs/Espresso.mp3" >🎵 Espresso</li>
+        <li data-src="Songs/Fortnight.mp3" >🎵 Fortnight</li>
+        <li data-src="Songs/Big Dawgs.mp3">🎵 Big Dawgs</li>
+        <li data-src="Songs/Beautiful Things.mp3" >🎵 Beautiful Things</li>
+        <li data-src="Songs/BLUE.mp3" >🎵 Blue</li>
+            </ul>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="current-song-bg-container">
+    <div class="current-song-info">
+       <h2>Lost in the Echo</h2> <br>
+       <p>"A powerful track with aggressive beats and signature 
+         Linkin <br>Park style, blending rap verses with melodic choruses."</p><br>
+      <button class="btn play">Play</button>
+      <button class="btn follow">Follow</button>
+
+      <div class="popular-albums">
+        <h3>Popular Albums</h3>
+        <div class="album-grid">
+          <div class="album" id="album1"> Album 1</div>
+          <div class="album" id="album2">Album 2</div>
+          <div class="album" id="album3">Album 3</div>
+          <div class="album" id="album4">Album 4</div>
+          <div class="album" id="album5">Album 5</div>
+          <div class="album" id="album6">Album 6</div>
+          <div class="album" id="album7">Album 7</div>
+        </div>
+      </div>
+
+      </div>
+    </div>
+    <div class="popular-artists">
+      <h3>Popular Artists</h3>
+      <div class="artist-grid">
+        <div id="ar1" class="artist"> </div>
+        <div id="ar2" class="artist"> </div>
+        <div id="ar3" class="artist"></div>
+        <div id="ar4" class="artist"></div>
+        <div id="ar5" class="artist"></div>
+        <div id="ar6" class="artist"></div>
+        <div id="ar7" class="artist"></div>
+    </div>
+    <div class="artistname-grid">
+      <div  class="artistname">The Weeknd</div>
+      <div  class="artistname">Dua Lipa</div>
+      <div  class="artistname">   Ed Sheeran</div>
+      <div  class="artistname">Billie Eilish</div>
+      <div  class="artistname">Post Malone</div>
+      <div class="artistname">Kendrick Lamar</div>
+      <div  class="artistname">Bruno Mars</div>
+  </div>
+
+    </div>
+<br>
+<br>
+<!-- *********************** -->
+<div class="music-player">
+  <audio id="audioPlayer" controls>
+      <source id="audioSource" src="songs/bad-habits.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+  </audio>
+
+    <div class="player-controls">
+      <button class="prev"><i class="fa fa-backward"></i></button>
+      <button class="btn play"><i id="playlowerbtn" class="fa fa-play"></i>
+      </button>
+      <button class="next"><i class="fa fa-forward"></i></button>
+
+      <input type="range" id="progress-bar" value="0" max="100">
+
+      <div class="volume-control">
+        <i class="fa fa-volume-down"></i>
+        <audio id="audio-player" src="Alibi.mp3"></audio>
+        <input type="range" id="volume-bar" min="0" max="100" value="50">
+        <i class="fa fa-volume-up"></i>
+      </div>
+    </div>
+  </div>
+  <script src="music_player.js"></script>
+</body>
+</html>
